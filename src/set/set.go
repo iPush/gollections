@@ -91,3 +91,14 @@ func Inter(s, s2 *set) *set {
 	}
 	return s3
 }
+
+func Union(s1, s2 *set) *set {
+	s3 := NewSet()
+	for k, _ := range s1.s {
+		s3.Add(k)
+	}
+	for k, _ := range s2.s {
+		s3.Add(k)
+	}
+	return s3
+}
